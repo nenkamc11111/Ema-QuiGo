@@ -5,3 +5,15 @@ Very often when you buy a plane ticket you get 2 suitcases of 23kg, a small suit
 The idea is to put some of this luggage on sale if you don't need it.
 
 - Main goal: our application will allow to sell the luggage of the users.
+
+ Documents (separate folder in Git)
+ 
+• Project artefacts (user stories, wireframes, etc.)
+
+• Technical documentation
+
+• Presentation slides
+
+• Demo video showing your app (short, 2-3 mins)
+
+• Time tracking
