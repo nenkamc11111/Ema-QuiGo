@@ -3,7 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Surface/OneDrive/Documents/Ema/QuiGo/QuiGo/app/src/main/res/layout/activity_login.xml" value="0.1716485507246377" />
+        <entry key="..\:/Users/Surface/Downloads/QuiGo_Create _Categories/QuiGo/app/src/main/res/layout/row_category.xml" value="0.1296875" />
       </map>
     </option>
   </component>
@@ -12,8 +12,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="SuppressKotlinCodeStyleNotification">
-    <option name="disableForAll" value="true" />
   </component>
 </project>
