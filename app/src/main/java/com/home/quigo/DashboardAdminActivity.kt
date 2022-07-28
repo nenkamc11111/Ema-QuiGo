@@ -1,11 +1,12 @@
 package com.home.quigo
 
+import android.app.ProgressDialog
 import android.content.Intent
-import androidx.appcompat.apgip.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.firebase.auth.FirebaseAuth
 import com.home.quigo.databinding.ActivityDashboardAdminBinding
-import com.home.quigo.databinding.ActivityDashboardUserBinding
+import com.home.quigo.databinding.ActivityMainBinding
 
 class DashboardAdminActivity : AppCompatActivity() {
     //view binding
