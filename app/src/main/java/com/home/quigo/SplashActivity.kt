@@ -43,8 +43,8 @@ class SplashActivity : AppCompatActivity() {
                         val userType = snapshot.child("userType").value
                         if(userType == "user"){
                             //simple user, open user dashboard
-                            startActivity(Intent(this@SplashActivity, DashboardUserActivity::class.java))
-                            finish()
+                            startActivity(Intent(this@SplashActivity, DashboardActivity::class.java))
+                             finish()
                         }
                         else if(userType == "admin"){
                             //Admin, open admin dashboard

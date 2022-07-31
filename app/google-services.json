@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "882886264102",
-    "firebase_url": "https://quigo-c8d6d-default-rtdb.firebaseio.com",
-    "project_id": "quigo-c8d6d",
-    "storage_bucket": "quigo-c8d6d.appspot.com"
+    "project_number": "825700066974",
+    "firebase_url": "https://quigo-f133f-default-rtdb.firebaseio.com",
+    "project_id": "quigo-f133f",
+    "storage_bucket": "quigo-f133f.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:882886264102:android:43bd621a4286fdf7b36de7",
+        "mobilesdk_app_id": "1:825700066974:android:63d2590b1c2a89d5357d8f",
         "android_client_info": {
           "package_name": "com.home.quigo"
         }
       },
       "oauth_client": [
         {
-          "client_id": "882886264102-uuce0bkghj30hk7vkjn714ju81b53cka.apps.googleusercontent.com",
+          "client_id": "825700066974-nokp3tmsqpd8p33uune3dpdi8pg3jjee.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB6vZX1__nVY4_Oc_tHc-LcUA5mFwqypog"
+          "current_key": "AIzaSyBHCiz7FSWFyK03_yJ5v90IsYJE3r9Gecw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "882886264102-uuce0bkghj30hk7vkjn714ju81b53cka.apps.googleusercontent.com",
+              "client_id": "825700066974-nokp3tmsqpd8p33uune3dpdi8pg3jjee.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -8,7 +8,7 @@ import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.home.quigo.databinding.ActivityCategoryAddBinding
-import com.home.quigo.databinding.ActivityDashboardUserBinding
+import com.home.quigo.databinding.ActivityDashboardBinding
 
 class CategoryAddActivity : AppCompatActivity() {
 

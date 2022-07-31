@@ -133,7 +133,7 @@ class RegisterActivity : AppCompatActivity() {
                 //User info saved, open user dashboard
                 progressDialog.dismiss()
                 Toast.makeText(this, "Account created", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this@RegisterActivity, DashboardUserActivity::class.java))
+                startActivity(Intent(this@RegisterActivity, DashboardActivity::class.java))
                 finish()
             }
             .addOnFailureListener{e->

@@ -3,6 +3,8 @@ package com.home.quigo
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import com.home.quigo.databinding.ActivityDashboardBinding
 import com.home.quigo.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -19,11 +21,5 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, LoginActivity::class.java))
         }
 
-        //Handle click, skip and continue to main screen
-        binding.skipBtn.setOnClickListener{
-            startActivity(Intent(this, DashboardUserActivity::class.java))
-        }
-
-        //connect with firebase
     }
 }

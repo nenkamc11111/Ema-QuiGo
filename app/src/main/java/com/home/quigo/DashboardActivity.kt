@@ -10,24 +10,25 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import com.home.quigo.databinding.ActivityDashboardAdminBinding
+import com.home.quigo.databinding.ActivityDashboardBinding
 import java.lang.Exception
 
-class DashboardAdminActivity : AppCompatActivity() {
+class DashboardActivity : AppCompatActivity() {
     //view binding
-    private lateinit var binding: ActivityDashboardAdminBinding
+    private lateinit var binding: ActivityDashboardBinding
     //firebase auth
     private lateinit var firebaseAuth: FirebaseAuth
 
     //arraylist to hold categories
     private lateinit var  categoryArrayList: ArrayList<ModelCategory>
     //adapter
-    private lateinit var adapterCategory: AdapterCategory
+    private lateinit var adapterCategory: AdapterCategoryUser
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityDashboardAdminBinding.inflate(layoutInflater)
+        binding = ActivityDashboardBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
 
         //Init firebase auth
         firebaseAuth = FirebaseAuth.getInstance()
@@ -35,7 +36,7 @@ class DashboardAdminActivity : AppCompatActivity() {
         loadCategories()
 
         //search
-        binding.searchEt.addTextChangedListener(object: TextWatcher{
+        binding.searchEt.addTextChangedListener(object: TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
 
             }
@@ -62,17 +63,10 @@ class DashboardAdminActivity : AppCompatActivity() {
             checkUser()
         }
 
-        //handle click, Start add category page
-        binding.addCategoryBtn.setOnClickListener {
-            startActivity(Intent(this, CategoryAddActivity::class.java))
-        }
-
-        //handle click, Start add pdf page
+        //handle click, Start add post page
         binding.addBtnFab.setOnClickListener{
             startActivity(Intent(this, AnnoAddActivity::class.java))
         }
-
-
     }
 
     private fun loadCategories() {
@@ -81,7 +75,7 @@ class DashboardAdminActivity : AppCompatActivity() {
 
         //get all categories from firebase database... Firebase DB > Categories
         val ref = FirebaseDatabase.getInstance().getReference("Categories")
-        ref.addValueEventListener(object: ValueEventListener{
+        ref.addValueEventListener(object: ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 //clear list before starting adding data into it
                 categoryArrayList.clear()
@@ -93,7 +87,7 @@ class DashboardAdminActivity : AppCompatActivity() {
                     categoryArrayList.add(model!!)
                 }
                 //setup adapter
-                adapterCategory = AdapterCategory(this@DashboardAdminActivity, categoryArrayList)
+                adapterCategory = AdapterCategoryUser(this@DashboardActivity, categoryArrayList)
                 //set adapter to recyclerview
                 binding.categoriesRV.adapter = adapterCategory
             }
