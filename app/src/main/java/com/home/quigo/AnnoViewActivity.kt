@@ -41,12 +41,12 @@ class AnnoViewActivity : AppCompatActivity() {
         Log.d(TAG, "loadBookDetails: Get Post Url from DB")
         //Db reference to get book details
 
-        //Step 1) Get Book Url Using Book Id
+        //Step 1) Get post Url Using post Id
         val ref = FirebaseDatabase.getInstance().getReference("Posts")
         ref.child(postId)
             .addListenerForSingleValueEvent(object: ValueEventListener{
                 override fun onDataChange(snapshot: DataSnapshot) {
-                    //get book url
+                    //get post url
                     val postUrl = snapshot.child("url").value
                     Log.d(TAG, "onDataChange: POST_URL: $postUrl")
                 }
