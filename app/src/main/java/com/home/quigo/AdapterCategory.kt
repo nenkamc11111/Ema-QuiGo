@@ -79,6 +79,8 @@ class AdapterCategory: RecyclerView.Adapter<AdapterCategory.HolderCategory>,Filt
         val id = model.id
         //Firebase DB > Categories > categoryId
         val ref = FirebaseDatabase.getInstance().getReference("Categories")
+        ref.keepSynced(true)
+
         ref.child(id)
             .removeValue()
             .addOnSuccessListener {

@@ -75,6 +75,8 @@ class DashboardActivity : AppCompatActivity() {
 
         //get all categories from firebase database... Firebase DB > Categories
         val ref = FirebaseDatabase.getInstance().getReference("Categories")
+        ref.keepSynced(true)
+
         ref.addValueEventListener(object: ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 //clear list before starting adding data into it

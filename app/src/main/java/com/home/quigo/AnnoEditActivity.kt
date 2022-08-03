@@ -70,6 +70,8 @@ class AnnoEditActivity : AppCompatActivity() {
         Log.d(TAG, "loadPostInfo: Loading post info")
 
         val ref = FirebaseDatabase.getInstance().getReference("Posts")
+        ref.keepSynced(true)
+
         ref.child(postId)
             .addListenerForSingleValueEvent(object: ValueEventListener{
                 override fun onDataChange(snapshot: DataSnapshot) {
@@ -87,6 +89,8 @@ class AnnoEditActivity : AppCompatActivity() {
                     //load back category info using categoryId
                     Log.d(TAG, "onDataChange: Loading post category info")
                     val refPostCategory = FirebaseDatabase.getInstance().getReference("Categories")
+                    ref.keepSynced(true)
+
                     refPostCategory.child(selectedCategoryId)
                         .addListenerForSingleValueEvent(object: ValueEventListener{
                             override fun onDataChange(snapshot: DataSnapshot) {
@@ -154,6 +158,8 @@ class AnnoEditActivity : AppCompatActivity() {
 
         //start updating
         val ref = FirebaseDatabase.getInstance().getReference("Posts")
+        ref.keepSynced(true)
+
         ref.child(postId)
             .updateChildren(hashMap)
             .addOnSuccessListener {
@@ -206,6 +212,8 @@ class AnnoEditActivity : AppCompatActivity() {
         categoryIdArrayList = ArrayList()
 
         val ref = FirebaseDatabase.getInstance().getReference("Categories")
+        ref.keepSynced(true)
+
         ref.addListenerForSingleValueEvent(object: ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
                 //clear list before starting adding data into them

@@ -78,6 +78,8 @@ class CategoryAddActivity : AppCompatActivity() {
 
         //add to firebase db: Database Root > Categories > categoryId > category info
         val ref = FirebaseDatabase.getInstance().getReference("Categories")
+        ref.keepSynced(true)
+
         ref.child("$timestamp")
             .setValue(hashMap)
             .addOnSuccessListener {
@@ -91,6 +93,5 @@ class CategoryAddActivity : AppCompatActivity() {
                 progressDialog.dismiss()
                 Toast.makeText(this, "Failed to add due to ${e.message}", Toast.LENGTH_SHORT).show()
             }
-
     }
 }

@@ -79,6 +79,8 @@ class AnnoDetailActivity : AppCompatActivity() {
     private fun loadPostDetails() {
         //Posts > postId > Details
         val ref = FirebaseDatabase.getInstance().getReference("Posts")
+        ref.keepSynced(true)
+
         ref.child(postId)
             .addListenerForSingleValueEvent(object: ValueEventListener{
                 override fun onDataChange(snapshot: DataSnapshot) {

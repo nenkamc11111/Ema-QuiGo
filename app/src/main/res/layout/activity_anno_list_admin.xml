@@ -65,7 +65,7 @@
         android:textColorHint="@color/gray02"
         android:textColor="@color/black"/>
 
-    <!--pdf/Book List-->
+    <!--post/Book List-->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/postsRV"
         android:layout_width="match_parent"

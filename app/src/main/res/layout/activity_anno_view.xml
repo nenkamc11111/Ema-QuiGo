@@ -48,12 +48,6 @@
 
     </RelativeLayout>
 
-    <!--PDFView-->
-    <com.github.barteksc.pdfviewer.PDFView
-        android:id="@+id/pdfView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/toolbarRL"/>
 
     <!--ProgressBar: Show while book is loading-->
     <ProgressBar

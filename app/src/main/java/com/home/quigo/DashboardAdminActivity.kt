@@ -67,7 +67,7 @@ class DashboardAdminActivity : AppCompatActivity() {
             startActivity(Intent(this, CategoryAddActivity::class.java))
         }
 
-        //handle click, Start add pdf page
+        //handle click, Start add post page
         binding.addBtnFab.setOnClickListener{
             startActivity(Intent(this, AnnoAddActivity::class.java))
         }
@@ -81,6 +81,8 @@ class DashboardAdminActivity : AppCompatActivity() {
 
         //get all categories from firebase database... Firebase DB > Categories
         val ref = FirebaseDatabase.getInstance().getReference("Categories")
+        ref.keepSynced(true)
+
         ref.addValueEventListener(object: ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
                 //clear list before starting adding data into it

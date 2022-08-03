@@ -127,6 +127,8 @@ class RegisterActivity : AppCompatActivity() {
 
         //set data to db
         val ref = FirebaseDatabase.getInstance().getReference("Users")
+        ref.keepSynced(true)
+
         ref.child(uid!!)
             .setValue(hashMap)
             .addOnSuccessListener {

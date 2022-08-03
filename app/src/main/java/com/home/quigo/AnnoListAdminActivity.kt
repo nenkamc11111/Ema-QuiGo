@@ -80,6 +80,8 @@ class AnnoListAdminActivity : AppCompatActivity() {
         annoArrayList = ArrayList()
 
         val ref = FirebaseDatabase.getInstance().getReference("Posts")
+        ref.keepSynced(true)
+
         ref.orderByChild("categoryId").equalTo(categoryId)
             .addValueEventListener(object: ValueEventListener{
                 override fun onDataChange(snapshot: DataSnapshot) {

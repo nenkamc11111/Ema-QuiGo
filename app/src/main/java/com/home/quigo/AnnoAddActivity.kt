@@ -102,13 +102,13 @@ class AnnoAddActivity : AppCompatActivity() {
             Toast.makeText(this, "Enter Contact...", Toast.LENGTH_SHORT).show()
         }
         else{
-            //data validated, Upload pdf to firebase storage
+            //data validated, Upload post to firebase storage
             uploadPostToStorage()
         }
     }
 
     private fun uploadPostToStorage() {
-        //STEP2: Upload pdf to firebase storage
+        //STEP2: Upload post to firebase storage
         Log.d(TAG, "uploadPostToStorage: uploading to storage")
 
         //show progress dialog
@@ -124,9 +124,9 @@ class AnnoAddActivity : AppCompatActivity() {
         uploadPostInfoToDB( timestamp)
 
     }
-
+    //save data in database
     private fun uploadPostInfoToDB( timestamp: Long) {
-        //STEP4: Upload Pdf info to firebase db
+        //STEP4: Upload Post info to firebase db
         Log.d(TAG, "uploadPostInfoToDb: uploading to db")
         progressDialog.setMessage("Uploading post info..")
 
@@ -146,6 +146,8 @@ class AnnoAddActivity : AppCompatActivity() {
 
         //db reference DB > Posts > PostId > (Post Info)
         val ref = FirebaseDatabase.getInstance().getReference("Posts")
+        ref.keepSynced(true)
+
         ref.child("$timestamp")
             .setValue(hashMap)
             .addOnSuccessListener {
@@ -168,12 +170,14 @@ class AnnoAddActivity : AppCompatActivity() {
     }
 
     private fun loadPostCategories() {
-        Log.d(TAG, "loadPdfCategories: Loading pdf categories")
+        Log.d(TAG, "loadPostCategories: Loading post categories")
         //init arrayList
         categoryArrayList = ArrayList()
 
         //DB reference to load categories DF > Categories
         val ref = FirebaseDatabase.getInstance().getReference("Categories")
+        ref.keepSynced(true)
+
         ref.addListenerForSingleValueEvent(object: ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
                 //Clear List before adding data
@@ -198,7 +202,7 @@ class AnnoAddActivity : AppCompatActivity() {
     private var selectedCategoryTitle=""
 
     private fun categoryPickDialog(){
-        Log.d(TAG, "categoryPickDialog: Showing pdf category pick dialog")
+        Log.d(TAG, "categoryPickDialog: Showing post category pick dialog")
 
         //get string array of categories from arraylist
         val categoriesArray = arrayOfNulls<String>(categoryArrayList.size)

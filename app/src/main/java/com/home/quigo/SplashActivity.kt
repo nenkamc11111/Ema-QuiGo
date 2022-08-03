@@ -34,6 +34,8 @@ class SplashActivity : AppCompatActivity() {
         else{
             //User logged in, check user type
             val ref = FirebaseDatabase.getInstance().getReference("Users")
+            ref.keepSynced(true)
+
             ref.child(firebaseUser.uid)
                 .addListenerForSingleValueEvent(object : ValueEventListener {
 

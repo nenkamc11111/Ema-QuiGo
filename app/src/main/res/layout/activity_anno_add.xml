@@ -45,7 +45,7 @@
             android:textColor="@color/white"
             android:textSize="28sp" />
 
-        <!--Attach pdf button-->
+        <!--Attach post button-->
 
     </RelativeLayout>
 

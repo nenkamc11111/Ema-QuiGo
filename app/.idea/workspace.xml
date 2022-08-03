@@ -14,13 +14,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="131de7ba-7c28-4e5b-bd0f-4c4d217789f7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/home/quigo/PostUtil.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/home/quigo/RegistrationUtil.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/home/quigo/PostUtilTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/home/quigo/RegistratUtilTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/home/quigo/offline.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/home/quigo/AdapterAnnoAdmin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/quigo/AdapterAnnoAdmin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/home/quigo/AdapterCategory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/quigo/AdapterCategory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/home/quigo/AnnoAddActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/quigo/AnnoAddActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/home/quigo/AnnoDetailActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/quigo/AnnoDetailActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/home/quigo/AnnoEditActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/quigo/AnnoEditActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/home/quigo/AnnoListAdminActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/quigo/AnnoListAdminActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/home/quigo/AnnoViewActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/quigo/AnnoViewActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/home/quigo/CategoryAddActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/quigo/CategoryAddActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/home/quigo/DashboardActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/quigo/DashboardActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/home/quigo/DashboardAdminActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/quigo/DashboardAdminActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/home/quigo/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/quigo/LoginActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/home/quigo/MyApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/quigo/MyApplication.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/home/quigo/RegisterActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/quigo/RegisterActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/home/quigo/SplashActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/quigo/SplashActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_anno_add.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_anno_add.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_anno_list_admin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_anno_list_admin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_anno_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_anno_view.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +72,7 @@
       <list>
         <option value="Kotlin Object" />
         <option value="JUnit4 Test Class" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -84,7 +100,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
-    <property name="SHOW_ALL_PROCESSES" value="false" />
+    <property name="SHOW_ALL_PROCESSES" value="true" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />

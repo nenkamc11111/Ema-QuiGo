@@ -9,7 +9,6 @@ import android.view.View
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
-import com.github.barteksc.pdfviewer.PDFView
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -38,6 +37,8 @@ class MyApplication: Application() {
         fun loadCategory(categoryId: String, categoryTv: TextView){
             //load category using category id from firebase
             val ref = FirebaseDatabase.getInstance().getReference("Categories")
+            ref.keepSynced(true)
+
             ref.child(categoryId)
                 .addListenerForSingleValueEvent(object: ValueEventListener{
                     override fun onDataChange(snapshot: DataSnapshot) {
@@ -72,8 +73,10 @@ class MyApplication: Application() {
             progressDialog.setCanceledOnTouchOutside(false)
             progressDialog.show()
 
-            Log.d(TAG, "deleteBook: Deleting from storage...")
+            Log.d(TAG, "deletePost: Deleting from storage...")
             val ref = FirebaseDatabase.getInstance().getReference("Posts")
+            ref.keepSynced(true)
+
             ref.child(postId)
                 .removeValue()
                 .addOnSuccessListener {
@@ -91,6 +94,8 @@ class MyApplication: Application() {
         fun incrementBookViewCount(postId: String){
             //1) Get current book views count
             val ref = FirebaseDatabase.getInstance().getReference("Posts")
+            ref.keepSynced(true)
+
             ref.child(postId)
                 .addListenerForSingleValueEvent(object: ValueEventListener{
                     override fun onDataChange(snapshot: DataSnapshot) {

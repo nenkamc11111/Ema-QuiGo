@@ -43,6 +43,8 @@ class AnnoViewActivity : AppCompatActivity() {
 
         //Step 1) Get post Url Using post Id
         val ref = FirebaseDatabase.getInstance().getReference("Posts")
+        ref.keepSynced(true)
+
         ref.child(postId)
             .addListenerForSingleValueEvent(object: ValueEventListener{
                 override fun onDataChange(snapshot: DataSnapshot) {
